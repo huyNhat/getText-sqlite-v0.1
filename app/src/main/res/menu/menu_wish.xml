@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_remove_wishlist"
+        android:icon="@drawable/ic_star"
+        android:orderInCategory="100"
+        android:title="Remove from Wish List" />
+
+    <item
+        android:id="@+id/action_email_user1"
+        android:icon="@drawable/ic_email"
+        android:orderInCategory="101"
+        android:title="Email seller" />
+</menu>

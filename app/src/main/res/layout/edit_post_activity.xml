@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bookPicture1"
+            android:layout_width="138dp"
+            android:layout_height="146dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/placeholder"
+            />
+
+        <EditText
+            android:id="@+id/inputBookTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Book Title"
+
+            android:drawableLeft="@drawable/ic_book"
+            app:layout_constraintEnd_toEndOf="@+id/bookPicture1"
+            app:layout_constraintStart_toStartOf="@+id/bookPicture1"
+            app:layout_constraintTop_toBottomOf="@+id/bookPicture1" />
+
+        <EditText
+            android:id="@+id/inputPrice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:drawableLeft="@drawable/ic_price"
+            android:ems="10"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="@+id/inputISBN1"
+            app:layout_constraintTop_toBottomOf="@+id/inputISBN1" />
+
+        <EditText
+            android:id="@+id/courseListEdit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="Course Used e.g: CSIS3175"
+            android:drawableLeft="@drawable/ic_course_used"
+            app:layout_constraintEnd_toEndOf="@+id/inputPrice1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPrice1" />
+
+        <Spinner
+            android:id="@+id/spinnerCondition1"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/conditionList"
+            app:layout_constraintEnd_toEndOf="@+id/courseListEdit1"
+            app:layout_constraintStart_toStartOf="@+id/courseListEdit1"
+            app:layout_constraintTop_toBottomOf="@+id/courseListEdit1" />
+
+        <Button
+            android:id="@+id/buttonSaveEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Save Edit"
+            android:textColor="@color/White"
+            android:background="@drawable/green_onclick_grey"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerCondition1"
+            app:layout_constraintStart_toStartOf="@+id/spinnerCondition1"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCondition1" />
+        <Button
+            android:id="@+id/buttonDetelePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Delete Post"
+            android:textColor="@color/White"
+            android:background="@color/DarkGrey"
+            app:layout_constraintEnd_toEndOf="@+id/buttonSaveEdit"
+            app:layout_constraintStart_toStartOf="@+id/buttonSaveEdit"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSaveEdit" />
+
+        <EditText
+            android:id="@+id/inputISBN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:ems="10"
+            android:hint="Enter ISBN or Scan a barcode  -------------->"
+            android:inputType="text"
+            android:editable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputBookTitle1" />
+
+        <ImageView
+            android:id="@+id/imageViewScanButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/inputISBN1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/inputISBN1"
+            app:layout_constraintTop_toTopOf="@+id/inputISBN1"
+            app:srcCompat="@drawable/ic_scan" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+        <!--android:background="@color/Grey"-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

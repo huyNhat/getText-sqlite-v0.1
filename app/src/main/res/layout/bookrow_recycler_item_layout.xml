@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    android:layout_marginBottom="4dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/bookImageView"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:srcCompat="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/bookTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Book Title"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@+id/bookImageView"
+            card_view:layout_constraintTop_toTopOf="@+id/bookImageView" />
+
+
+        <TextView
+            android:id="@+id/isbnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ISBN:"
+            card_view:layout_constraintStart_toStartOf="@+id/bookTitleView"
+            card_view:layout_constraintTop_toBottomOf="@+id/bookTitleView" />
+
+        <TextView
+            android:id="@+id/courseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Course:"
+            card_view:layout_constraintStart_toStartOf="@+id/isbnTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/isbnTextView" />
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Price:"
+            card_view:layout_constraintStart_toStartOf="@+id/courseTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/courseTextView" />
+
+        <TextView
+            android:id="@+id/isbnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="123456789"
+            card_view:layout_constraintBottom_toBottomOf="@+id/isbnTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/isbnTextView" />
+
+        <TextView
+            android:id="@+id/courseView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="8dp"
+            android:text="CSIS3175"
+            card_view:layout_constraintBottom_toBottomOf="@+id/courseTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/courseTextView" />
+
+        <TextView
+            android:id="@+id/priceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="$19"
+            android:textColor="@color/colorPrimary"
+            card_view:layout_constraintBottom_toBottomOf="@+id/priceTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/priceTextView" />
+
+        <TextView
+            android:id="@+id/dashView"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="--"
+            card_view:layout_constraintBottom_toBottomOf="@+id/priceView"
+            card_view:layout_constraintStart_toEndOf="@+id/priceView" />
+
+        <TextView
+            android:id="@+id/conditionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Condition"
+            android:textStyle="bold"
+            card_view:layout_constraintBaseline_toBaselineOf="@+id/priceView"
+            card_view:layout_constraintStart_toEndOf="@+id/priceView" />
+
+        <ImageView
+            android:id="@+id/threeDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:srcCompat="@drawable/ic_three_dots" />
+
+
+        <!--
+        <TextView
+            android:id="@+id/getITbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="24dp"
+            android:text="GET IT"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.907"
+            card_view:layout_constraintStart_toEndOf="@+id/conditionView"
+            card_view:layout_constraintTop_toBottomOf="@+id/conditionView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="SAVE TO WISHLIST"
+            card_view:layout_constraintBaseline_toBaselineOf="@id/getITbtn"
+            card_view:layout_constraintBottom_toBottomOf="@+id/getITbtn"
+            card_view:layout_constraintEnd_toStartOf="@+id/getITbtn" />
+
+        -->
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
